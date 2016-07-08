@@ -2,10 +2,19 @@
 <html ng-app="CakeApp">
 <head>
 	<title>Cake</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-animate.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.4/ui-bootstrap-tpls.js"></script>
 	<script src="app.js"></script>
 </head>
 <body>
+<div ng-include="'/views/navbar.html'"></div>
+
+<div ng-controller="HomeCtrl">
+{{name}}
+</div>
 
 </body>
 </html>
