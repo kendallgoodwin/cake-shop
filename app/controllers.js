@@ -16,11 +16,23 @@ app.controller('NavCtrl', ['$scope', function($scope) {
 app.controller('HomeCtrl', ['$scope', '$state', function($scope, $state) {
 	$scope.name = "Kendall Maniulit";
 
-	$state.go('home');
+	$state.go('Home');
 
 }])
 
-app.controller('AboutCtrl', ['$scope', '$state', function($scope, $state) {
+app.controller('GalleryCtrl', ['$scope', '$state', function($scope, $state) {
 
-	$state.go('About');
+	$state.go('Gallery');
+
+}])
+
+app.controller('ContactCtrl', ['$scope', '$state', function($scope, $state) {
+
+	$state.go('Contact');
+
+}])
+
+app.controller('AllCakesCtrl', ['$scope', '$state', function($scope, $state) {
+
+	
 }])
