@@ -1,4 +1,4 @@
-var app = angular.module('CakeApp', ['CakeCtrl', "ui.router"])
+var app = angular.module('CakeApp', ['CakeCtrl', 'ui.router'])
 
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
@@ -43,7 +43,7 @@ var app = angular.module('CakeApp', ['CakeCtrl', "ui.router"])
   .state('WeddingCakes', {
   	url: '/weddingcakes',
   	templateUrl: 'views/weddingcakes.html',
-  	controller: 'AllCakesCtrl'
+  	controller: 'WCakesCtrl'
   })
   $stateProvider
   .state('OtherCakes', {
