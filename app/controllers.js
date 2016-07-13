@@ -161,7 +161,7 @@ app.controller('CakesCtrl', ['$scope', '$state', function($scope, $state) {
     var newWidth = 600 + slides.length + 1;
     slides.push({
       image: 'http://lorempixel.com/' + newWidth + '/300',
-      text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
+      // text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
       id: currIndex++
     });
   };
