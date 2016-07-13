@@ -1,0 +1,14 @@
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+		height: 400px;
+	}
+
+#wedding-cake-text {
+	float: left;
+	margin-top: 10px;
+}
+
+#wedding-cake-carousel {
+	float: right;
+	margin-top: 40px;
+	margin-left: 15px;
+}

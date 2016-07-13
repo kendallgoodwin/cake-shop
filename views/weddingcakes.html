@@ -1,11 +1,17 @@
 <div class="container">
 	<!-- <h1>Wedding Cakes</h1> -->
-	<div class="col-md-8 col-md-offset-2">
+
+	<div class="col-sm-6 col-md-6" id="wedding-cake-text">
+	<h2>Wedding Cakes</h2>
+	<p>Each of our cakes is designed to express your personal style and tastes. We offer consultations and tastings Monday through Saturday by appointment. Bring your wedding inspirations, from an invitation and color palettes to images, and we will work with you to create the perfect wedding cake.<br><br>	Call us to schedule a consultation: 206-283-8557<br><br>General wedding cake pricing (includes most decorations):<br><br>Tiered cakes start at $6.00 per serving.<br><br>Fondant tiered cakes start at $7.00 per serving.<br><br>We also offer sheet cakes on the side to supplement servings at $2.50 per serving.<br><br>We deliver anytime, prices start at $30 for downtown Seattle and increase based on distance.
+	</div>
+
+	<div class="col-sm-5 col-md-4" id="wedding-cake-carousel">
 		<div ng-controller="WCakesCtrl">
 		  <div style="height: 350px">
 		    <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
 		      <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-		        <img ng-src="{{slide.image}}" style="margin:auto;">
+		        <img ng-src="{{slide.image}}" style="margin:auto;" height="300">
 		        <!-- <img ng-src="images/weddingcakes/1.jpg" style="margin:auto"> -->
 		        <div class="carousel-caption">
 		          <!-- <h4>Slide {{slide.id}}</h4> -->
@@ -17,7 +23,5 @@
 		</div>
 	</div>
 
-	<div class="col-md-10 col-md-offset-1">
-	<p>Each of our cakes is designed to express your personal style and tastes. We offer consultations and tastings Monday through Saturday by appointment. Bring your wedding inspirations, from an invitation and color palettes to images, and we will work with you to create the perfect wedding cake.<br><br>	Call us to schedule a consultation: 206-283-8557<br><br>General wedding cake pricing (includes most decorations):<br><br>Tiered cakes start at $6.00 per serving.<br><br>Fondant tiered cakes start at $7.00 per serving.<br><br>We also offer sheet cakes on the side to supplement servings at $2.50 per serving.<br><br>We deliver anytime, prices start at $30 for downtown Seattle and increase based on distance.
-	</div>
+
 </div>
