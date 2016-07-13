@@ -38,14 +38,19 @@ app.controller('WCakesCtrl', ['$scope', '$state', function($scope, $state) {
   $scope.active = 0;
   var slides = $scope.slides = [];
   var currIndex = 0;
+  var weddingCakes = ['images/weddingcakes/1.jpg', 'images/weddingcakes/2.jpg', 'images/weddingcakes/3.jpg', 
+  'images/weddingcakes/4.jpg', 'images/weddingcakes/5.jpg', 'images/weddingcakes/6.jpg', 'images/weddingcakes/7.jpg',
+  'images/weddingcakes/8.jpg']
 
   $scope.addSlide = function() {
     var newWidth = 600 + slides.length + 1;
+    for (var i = 0; i < weddingCakes.length; i++) {
     slides.push({
-      image: 'http://lorempixel.com/' + newWidth + '/300',
-      text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
+      image: weddingCakes[i],
+      // text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
       id: currIndex++
     });
+   }
   };
 
   $scope.randomize = function() {
