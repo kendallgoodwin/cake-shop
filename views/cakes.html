@@ -1,5 +1,19 @@
 <div class="container">
-<!-- <h1>All Occasion Cakes</h1> -->
+	<div class="col-md-8 col-md-offset-2">
+		<div ng-controller="CakesCtrl">
+		  <div style="height: 350px">
+		    <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+		      <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+		        <img ng-src="{{slide.image}}" style="margin:auto;">
+		        <div class="carousel-caption">
+		          <h4>Slide {{slide.id}}</h4>
+		          <p>{{slide.text}}</p>
+		        </div>
+		      </uib-slide>
+		    </uib-carousel>
+		  </div>
+		</div>
+	</div>
 	<div class="col-md-10 col-md-offset-1">
 	<p>“A cake without a party is just a meeting”
 	~Julia Child<br><br>We cater to your flavor choices, cake sizes and special designs.<br><br>Please call to place your order at least 48 hours in advance. Custom work requires additional lead time, possibly up to two weeks.<br><br>Don’t forget to inquire about adult themed cakes!</p>

@@ -48,12 +48,14 @@ var app = angular.module('CakeApp', ['CakeCtrl', 'ui.router'])
   $stateProvider
   .state('OtherCakes', {
   	url: '/cakes',
-  	templateUrl: 'views/cakes.html'
+  	templateUrl: 'views/cakes.html',
+  	controller: 'CakesCtrl'
   })
   $stateProvider
   .state('Cupcakes', {
   	url: '/cupcakes',
-  	templateUrl: 'views/cupcakes.html'
+  	templateUrl: 'views/cupcakes.html',
+  	controller: 'CupcakesCtrl'
   })
   $stateProvider
   .state('Flavors', {

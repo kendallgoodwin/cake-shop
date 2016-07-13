@@ -1,7 +1,22 @@
 <div class="container">
-<!-- <h1>Cupcakes</h1> -->
+	<div class="col-md-8 col-md-offset-2">
+		<div ng-controller="CupcakesCtrl">
+		  <div style="height: 350px">
+		    <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+		      <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+		        <img ng-src="{{slide.image}}" style="margin:auto;">
+		        <div class="carousel-caption">
+		          <h4>Slide {{slide.id}}</h4>
+		          <p>{{slide.text}}</p>
+		        </div>
+		      </uib-slide>
+		    </uib-carousel>
+		  </div>
+		</div>
+	</div>
+
 	<div class="col-md-10 col-md-offset-1">
-	<p>Our sugar cookies are hand decorated and the possibilities are endless! We have countless cutter shapes and we are able to create the perfect design to suit your needs. Orders are taken by the dozen. Please allow at least one weeks notice for your order.<br><br>Cupcakes are a great solution to your party needs, they are the perfect mini cake that can be ordered by the dozen in a variety of flavor combinations with delicate design elements available.</p>
+		<p>Our sugar cookies are hand decorated and the possibilities are endless! We have countless cutter shapes and we are able to create the perfect design to suit your needs. Orders are taken by the dozen. Please allow at least one weeks notice for your order.<br><br>Cupcakes are a great solution to your party needs, they are the perfect mini cake that can be ordered by the dozen in a variety of flavor combinations with delicate design elements available.</p>
 	</div>
 
 </div>
