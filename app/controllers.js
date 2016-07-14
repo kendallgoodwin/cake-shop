@@ -20,11 +20,11 @@ app.controller('HomeCtrl', ['$scope', '$state', function($scope, $state) {
 
 }])
 
-app.controller('GalleryCtrl', ['$scope', '$state', function($scope, $state) {
+// app.controller('GalleryCtrl', ['$scope', '$state', function($scope, $state) {
 
-	$state.go('Gallery');
+// 	$state.go('Gallery');
 
-}])
+// }])
 
 app.controller('ContactCtrl', ['$scope', '$state', function($scope, $state) {
 
@@ -100,16 +100,24 @@ app.controller('CupcakesCtrl', ['$scope', '$state', function($scope, $state) {
 	$scope.myInterval = 5000;
   $scope.noWrapSlides = false;
   $scope.active = 0;
-  var slides = $scope.slides = [];
+  var cupcakes = ['images/cookiescupcakes/cupcake-1.jpg', 'images/cookiescupcakes/cookie-1.jpg', 
+  'images/cookiescupcakes/cupcake-2.jpg', 'images/cookiescupcakes/cookie-2.jpg', 
+  'images/cookiescupcakes/cupcake-3.jpg', 'images/cookiescupcakes/cupcake-7.jpg', 
+  'images/cookiescupcakes/cookie-3.jpg', 'images/cookiescupcakes/cupcake-4.jpg', 
+  'images/cookiescupcakes/cupcake-5.jpg', 'images/cookiescupcakes/cookie-4.jpg', 
+  'images/cookiescupcakes/cupcake-6.jpg']
+  var slides = $scope.slides = cupcakes;
   var currIndex = 0;
 
   $scope.addSlide = function() {
     var newWidth = 600 + slides.length + 1;
-    slides.push({
-      image: 'http://lorempixel.com/' + newWidth + '/300',
-      text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
-      id: currIndex++
-    });
+    for (var i = 0; i < cupcakes.length; i++) {
+	    slides.push({
+	      image: cupcakes[i],
+	      // text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
+	      id: currIndex++
+	    });
+  	}
   };
 
   $scope.randomize = function() {
