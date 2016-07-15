@@ -106,7 +106,7 @@ app.controller('CupcakesCtrl', ['$scope', '$state', function($scope, $state) {
   'images/cookiescupcakes/cookie-3.jpg', 'images/cookiescupcakes/cupcake-4.jpg', 
   'images/cookiescupcakes/cupcake-5.jpg', 'images/cookiescupcakes/cookie-4.jpg', 
   'images/cookiescupcakes/cupcake-6.jpg']
-  var slides = $scope.slides = cupcakes;
+  var slides = $scope.slides = [];
   var currIndex = 0;
 
   $scope.addSlide = function() {
@@ -125,9 +125,7 @@ app.controller('CupcakesCtrl', ['$scope', '$state', function($scope, $state) {
     assignNewIndexesToSlides(indexes);
   };
 
-  for (var i = 0; i < 4; i++) {
-    $scope.addSlide();
-  }
+  $scope.addSlide();
 
   // Randomize logic below
 
