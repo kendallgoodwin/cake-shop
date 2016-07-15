@@ -58,9 +58,7 @@ app.controller('WCakesCtrl', ['$scope', '$state', function($scope, $state) {
     assignNewIndexesToSlides(indexes);
   };
 
-  for (var i = 0; i < 4; i++) {
     $scope.addSlide();
-  }
 
   // Randomize logic below
 
@@ -166,15 +164,20 @@ app.controller('CakesCtrl', ['$scope', '$state', function($scope, $state) {
   $scope.noWrapSlides = false;
   $scope.active = 0;
   var slides = $scope.slides = [];
+  var cakes = ['images/cakes/cake-1.jpg', 'images/cakes/cake-10.jpg', 'images/cakes/cake-2.jpg',
+  'images/cakes/cake-3.jpg', 'images/cakes/cake-4.jpg', 'images/cakes/cake-5.jpg', 'images/cakes/cake-6.jpg',
+  'images/cakes/cake-7.jpg', 'images/cakes/cake-9.jpg', 'images/cakes/cake-8.jpg']
   var currIndex = 0;
 
   $scope.addSlide = function() {
     var newWidth = 600 + slides.length + 1;
-    slides.push({
-      image: 'http://lorempixel.com/' + newWidth + '/300',
-      // text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
-      id: currIndex++
-    });
+    for (var i = 0; i < cakes.length; i++) {
+	    slides.push({
+	      image: cakes[i],
+	      // text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
+	      id: currIndex++
+	    });
+    }
   };
 
   $scope.randomize = function() {
@@ -182,9 +185,7 @@ app.controller('CakesCtrl', ['$scope', '$state', function($scope, $state) {
     assignNewIndexesToSlides(indexes);
   };
 
-  for (var i = 0; i < 4; i++) {
     $scope.addSlide();
-  }
 
   // Randomize logic below
 

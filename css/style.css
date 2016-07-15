@@ -1,3 +1,7 @@
+p {
+	margin-top: 20px;
+}
+
 .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
 		height: 400px;
 	}
@@ -21,6 +25,19 @@
 }
 
 #cupcake-carousel {
+	float: right;
+	margin-top: 40px;
+	margin-left: 15px;
+}
+
+
+/*/////ALL CAKES VIEW/////*/
+#cake-text {
+	float: left;
+	margin-top: 10px;
+}
+
+#cake-carousel {
 	float: right;
 	margin-top: 40px;
 	margin-left: 15px;
