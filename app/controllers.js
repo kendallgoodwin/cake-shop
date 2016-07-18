@@ -222,7 +222,7 @@ app.controller('CakesCtrl', ['$scope', '$state', function($scope, $state) {
 }])
 
 app.controller('GalleryCtrl', function ($scope, $uibModal, $log) {
-	$scope.items = ['item1', 'item2', 'item3'];
+	$scope.items = ['images/cakes/cake-1.jpg', 'images/cakes/cake-2.jpg', 'images/cakes/cake-3.jpg'];
 
   $scope.animationsEnabled = true;
 

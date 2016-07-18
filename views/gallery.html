@@ -8,21 +8,23 @@
             <!-- <h3 class="modal-title">I'm a modal!</h3> -->
         </div>
         <div class="modal-body">
-        	<img class="modal-image" src="images/cakes/cake-1.jpg" height="425">
-            <!-- <ul>
+        	<img class="modal-image" src="images/cakes/cake-1.jpg" height="45">
+<!--             <ul>
                 <li ng-repeat="item in items">
                     <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
                 </li>
             </ul>
-            Selected: <b>{{ selected.item }}</b> -->
-        </div>
+            Selected: <b>{{ selected.item }}</b>
+        </div> -->
         <div class="modal-footer">
             <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
             <!-- <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button> -->
         </div>
     </script>
 
-    <a href=""><img src="images/cakes/cake-1.jpg" height="200" ng-click="open()"></a>
+  <ul>
+    <li ng-repeat="item in items"><a href=''><img src="{{item}}" height="200" ng-click="open()"></a></li>
+  </ul>
 	</div>
 
 </div>
