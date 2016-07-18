@@ -3,7 +3,7 @@ p {
 }
 
 .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
-		height: 400px;
+		height: 450px;
 	}
 
 #wedding-cake-text {
@@ -41,4 +41,10 @@ p {
 	float: right;
 	margin-top: 40px;
 	margin-left: 15px;
+}
+
+
+/*/////GALLERY/MODAL/////*/
+.modal-body {
+	text-align: center;
 }
