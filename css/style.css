@@ -54,7 +54,10 @@ li {
 
 
 /*/////GALLERY/MODAL/////*/
-.modal-body {
+/*.modal-body {
 	text-align: center;
-}
+}*/
 
+.img-thumbnail {
+	height: 200px;
+}

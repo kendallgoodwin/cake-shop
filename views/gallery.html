@@ -3,31 +3,38 @@
 	<h1>Gallery</h1>
 
 	<div ng-controller="GalleryCtrl">
-    <script type="text/ng-template" id="myModalContent.html">
+<!--     <script type="text/ng-template" id="myModalContent.html">
         <div class="modal-header">
-            <!-- <h3 class="modal-title">I'm a modal!</h3> -->
         </div>
         <div class="modal-body">
-        	<img src="{{selected.item}}" height="450">
+        	<img src="{{selected}}" height="450">
         </div>
-        	<!-- <img class="modal-image" src="$" height="450"> -->
        
-<!--             <ul>
+            <ul>
                 <li ng-repeat="item in items">
                     <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
                 </li>
             </ul>
             Selected: <b>{{ selected.item }}</b>
-        </div> -->
+        </div>
         <div class="modal-footer">
             <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
-            <!-- <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button> -->
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
         </div>
-    </script>
+    </script> -->
 
-  <ul>
+<ul>
+	<li ng-repeat="image in images">
+	<a ng-click="openLightboxModal($index)">
+      <img ng-src="{{image.url}}" class="img-thumbnail" height="200">
+    </a>
+  </li>
+</ul>
+
+
+<!--   <ul>
     <li ng-repeat="item in items track by $index"><a href=''><img src="{{item}}" height="200" ng-click="open()"></a></li>
-  </ul>
+  </ul> -->
 	</div>
 
 </div>

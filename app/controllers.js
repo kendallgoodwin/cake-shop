@@ -1,4 +1,4 @@
-angular.module('CakeCtrl', ['CakeServices', 'ngAnimate', 'ui.bootstrap'])
+angular.module('CakeCtrl', ['CakeServices', 'ngAnimate', 'ui.bootstrap', 'bootstrapLightbox'])
 
 
 app.controller('NavCtrl', ['$scope', function($scope) {
@@ -221,53 +221,68 @@ app.controller('CakesCtrl', ['$scope', '$state', function($scope, $state) {
 
 }])
 
-app.controller('GalleryCtrl', function ($scope, $uibModal, $log) {
-	$scope.items = ['images/cakes/cake-1.jpg', 'images/cakes/cake-2.jpg', 'images/cakes/cake-3.jpg'];
 
-  $scope.animationsEnabled = true;
+app.controller('GalleryCtrl', function ($scope, Lightbox) {
+$scope.images = [
+    {
+      'url': 'images/cakes/cake-1.jpg',
+      // 'thumbUrl': 'http://i.imgur.com/9RyWebbb.jpg'
+    }
+  ];
 
-  $scope.open = function (size) {
-
-    var modalInstance = $uibModal.open({
-      animation: $scope.animationsEnabled,
-      templateUrl: 'myModalContent.html',
-      controller: 'ModalInstanceCtrl',
-      size: size,
-      resolve: {
-        items: function () {
-          return $scope.items;
-        }
-      }
-    });
-
-    modalInstance.result.then(function (selectedItem) {
-      $scope.selected = selectedItem;
-    }, function () {
-      $log.info('Modal dismissed at: ' + new Date());
-    });
-  };
-
-  $scope.toggleAnimation = function () {
-    $scope.animationsEnabled = !$scope.animationsEnabled;
-  };
-
-});
-
-// Please note that $uibModalInstance represents a modal window (instance) dependency.
-// It is not the same as the $uibModal service used above.
-
-app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
-
-  $scope.items = items;
-  $scope.selected = {
-    item: $scope.items[0]
-  };
-
-  $scope.ok = function () {
-    $uibModalInstance.close($scope.selected.item);
-  };
-
-  $scope.cancel = function () {
-    $uibModalInstance.dismiss('cancel');
+  $scope.openLightboxModal = function (index) {
+    Lightbox.openModal($scope.images, index);
   };
 });
+
+// app.controller('GalleryCtrl', function ($scope, $uibModal, $log) {
+// 	$scope.items = ['images/cakes/cake-1.jpg', 'images/cakes/cake-2.jpg', 'images/cakes/cake-3.jpg', 
+// 	'images/cakes/cake-4.jpg', 'images/cakes/cake-5.jpg', 'images/cakes/cake-6.jpg'];
+
+//   $scope.animationsEnabled = true;
+
+//   $scope.open = function (size) {
+
+//     var modalInstance = $uibModal.open({
+//       animation: $scope.animationsEnabled,
+//       templateUrl: 'myModalContent.html',
+//       controller: 'ModalInstanceCtrl',
+//       size: size,
+//       resolve: {
+//         items: function () {
+//           return $scope.items;
+//         }
+//       }
+//     });
+
+//     modalInstance.result.then(function (selectedItem) {
+//       $scope.selected = selectedItem;
+//     }, function () {
+//       $log.info('Modal dismissed at: ' + new Date());
+//     });
+//   };
+
+//   $scope.toggleAnimation = function () {
+//     $scope.animationsEnabled = !$scope.animationsEnabled;
+//   };
+
+// });
+
+// // Please note that $uibModalInstance represents a modal window (instance) dependency.
+// // It is not the same as the $uibModal service used above.
+
+// app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
+
+//   $scope.items = items;
+//   $scope.selected = {
+//     item: $scope.items[0]
+//   };
+
+//   $scope.ok = function () {
+//     $uibModalInstance.close($scope.selected.item);
+//   };
+
+//   $scope.cancel = function () {
+//     $uibModalInstance.dismiss('cancel');
+//   };
+// });
