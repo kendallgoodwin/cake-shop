@@ -225,8 +225,85 @@ app.controller('CakesCtrl', ['$scope', '$state', function($scope, $state) {
 app.controller('GalleryCtrl', function ($scope, Lightbox) {
 $scope.images = [
     {
+      'url': 'images/cakes/cake-6.jpg',
+    },
+    {
+      'url': 'images/cookiescupcakes/cupcake-6.jpg',
+    },
+    {
+      'url': 'images/weddingcakes/6.jpg',
+    },
+    {
+      'url': 'images/cakes/cake-4.jpg',
+    },
+    {
+      'url': 'images/cookiescupcakes/cupcake-3.jpg',
+    },
+    {
+      'url': 'images/cakes/cake-2.jpg',
+    },
+    {
+      'url': 'images/cookiescupcakes/cupcake-2.jpg',
+    },
+    {
+      'url': 'images/weddingcakes/1.jpg',
+    },
+    {
+      'url': 'images/cakes/cake-3.jpg',
+    },
+    {
+      'url': 'images/cookiescupcakes/cookie-1.jpg',
+    },
+    {
+      'url': 'images/cakes/cake-7.jpg',
+    },
+    {
+      'url': 'images/weddingcakes/7.jpg',
+    },
+    {
+      'url': 'images/cookiescupcakes/cupcake-7.jpg',
+    },
+    {
+      'url': 'images/cakes/cake-8.jpg',
+    },
+    {
+      'url': 'images/cookiescupcakes/cookie-4.jpg',
+    },
+    {
+      'url': 'images/cookiescupcakes/cupcake-4.jpg',
+    },
+    {
+      'url': 'images/weddingcakes/5.jpg',
+    },
+    {
+      'url': 'images/cookiescupcakes/cupcake-5.jpg',
+    },
+    {
       'url': 'images/cakes/cake-1.jpg',
-      // 'thumbUrl': 'http://i.imgur.com/9RyWebbb.jpg'
+    },
+    {
+      'url': 'images/cookiescupcakes/cupcake-1.jpg',
+    },
+    {
+      'url': 'images/weddingcakes/3.jpg',
+    },
+    {
+      'url': 'images/cookiescupcakes/cookie-3.jpg',
+    },
+    {
+      'url': 'images/cakes/cake-10.jpg',
+    },
+    {
+      'url': 'images/weddingcakes/4.jpg',
+    },
+    {
+      'url': 'images/cookiescupcakes/cookie-2.jpg',
+    },
+    {
+      'url': 'images/weddingcakes/2.jpg',
+    },
+    {
+      'url': 'images/cakes/cake-5.jpg',
     }
   ];
 
@@ -234,55 +311,3 @@ $scope.images = [
     Lightbox.openModal($scope.images, index);
   };
 });
-
-// app.controller('GalleryCtrl', function ($scope, $uibModal, $log) {
-// 	$scope.items = ['images/cakes/cake-1.jpg', 'images/cakes/cake-2.jpg', 'images/cakes/cake-3.jpg', 
-// 	'images/cakes/cake-4.jpg', 'images/cakes/cake-5.jpg', 'images/cakes/cake-6.jpg'];
-
-//   $scope.animationsEnabled = true;
-
-//   $scope.open = function (size) {
-
-//     var modalInstance = $uibModal.open({
-//       animation: $scope.animationsEnabled,
-//       templateUrl: 'myModalContent.html',
-//       controller: 'ModalInstanceCtrl',
-//       size: size,
-//       resolve: {
-//         items: function () {
-//           return $scope.items;
-//         }
-//       }
-//     });
-
-//     modalInstance.result.then(function (selectedItem) {
-//       $scope.selected = selectedItem;
-//     }, function () {
-//       $log.info('Modal dismissed at: ' + new Date());
-//     });
-//   };
-
-//   $scope.toggleAnimation = function () {
-//     $scope.animationsEnabled = !$scope.animationsEnabled;
-//   };
-
-// });
-
-// // Please note that $uibModalInstance represents a modal window (instance) dependency.
-// // It is not the same as the $uibModal service used above.
-
-// app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
-
-//   $scope.items = items;
-//   $scope.selected = {
-//     item: $scope.items[0]
-//   };
-
-//   $scope.ok = function () {
-//     $uibModalInstance.close($scope.selected.item);
-//   };
-
-//   $scope.cancel = function () {
-//     $uibModalInstance.dismiss('cancel');
-//   };
-// });

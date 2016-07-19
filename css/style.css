@@ -8,7 +8,7 @@ ul {
 
 li {
 	display: inline;
-	margin-right: 10px;
+	/*margin-right: 10px;*/
 }
 
 .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
@@ -60,4 +60,5 @@ li {
 
 .img-thumbnail {
 	height: 200px;
+	width: 150px !important;
 }
